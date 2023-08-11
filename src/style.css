@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto';
+}
+
+body {
+    min-height: 100vh;
+    background-color: #191970;
+}
+
+.container {
+    padding: 150px;
+}
+
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.forecast-item {
+    height: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.current-content {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    flex-basis: 33%;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 24px;
+    padding: 5px;
+}
+
+.current-temp {
+    font-size: 124px;
+    position: relative;
+}
+
+.current-temp::after {
+    content: '°C';
+    position: absolute;
+    font-size: 24px;
+    right: -15px;
+
+}
+
+.forecast-temp {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    justify-content: space-evenly;
+    align-self: stretch;
+}
+
+.day {
+    font-size: 24px;
+}
+
+.current-data p span {
+    font-weight: bold;
+}
+
+.current-condition {
+    text-align: center;
+}
+
+.error {
+    display: none;
+    color: red;
+}
+
+.search-results {
+    position: relative;
+}
+
+.results {
+    display: none;
+    position: absolute;
+    top: 40px;
+    list-style: none;
+    background-color: white;
+    padding: 10px;
+}
+
+li {
+    color: black;
+    margin-bottom: 5px;
+}
