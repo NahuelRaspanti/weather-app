@@ -17,7 +17,7 @@ const processData = (data) => {
 
 const getWeather = async (location) => {
     const actualLocation = location ?? 'Buenos Aires';
-    const api = `http://api.weatherapi.com/v1/forecast.json?key=317dce246f544657a16151528231008&q=${actualLocation}&days=7&aqi=yes`;
+    const api = `https://api.weatherapi.com/v1/forecast.json?key=317dce246f544657a16151528231008&q=${actualLocation}&days=7&aqi=yes`;
     try{
         const response = await fetch(api, {mode:"cors"});
         if(response.status != 200){
@@ -34,7 +34,7 @@ const getWeather = async (location) => {
 }
 
 const searchLocation = async (location) => {
-    const api = `http://api.weatherapi.com/v1/search.json?key=317dce246f544657a16151528231008&q=${location}`;
+    const api = `https://api.weatherapi.com/v1/search.json?key=317dce246f544657a16151528231008&q=${location}`;
     var response = await fetch(api);
     const data = await response.json();
     return data;
